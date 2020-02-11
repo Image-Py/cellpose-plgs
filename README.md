@@ -21,13 +21,13 @@ there are two method to install  cellpose-plgs, Install Plugins or use Plugins M
 
 1. **Menus: Plugins > Install > Install Plugins** then input https://github.com/Image-Py/cellpose-plgs
 
-   ![](http://skimgplgs.imagepy.org/install.png)
+   ![](http://skimgplgs.imagepy.org/cellpose/install.png)
 
    
 
 2. **Menus:  Plugins > Manager > Plugins Manager**, befor you open the manager, you should update the software, (to getting the newest plugins catlog). for git version, please pull, for release version, please use *Menus: Plugins > Updata Software*.
 
-   ![](http://skimgplgs.imagepy.org/manager.png)
+   ![](http://skimgplgs.imagepy.org/cellpose/manager.png)
 
 when the cellpose-plgs is installed seccessfully, The cellpose would appears below the **Plugins** menus.
 
@@ -53,7 +53,7 @@ when the cellpose-plgs is installed seccessfully, The cellpose would appears bel
 
 **slice:** process the current image or all images when it is a sequence.
 
-![](http://skimgplgs.imagepy.org/cellpose.png)
+![](http://skimgplgs.imagepy.org/cellpose/cellpose.png)
 
 
 
@@ -61,7 +61,7 @@ when the cellpose-plgs is installed seccessfully, The cellpose would appears bel
 
 **Menus: Analysis > Region Analysis > Geometry Analysis** do a region analysis. And we can do many other things in ImagePy, such as set a colormap, or overlay the mask on the original image.
 
-![](http://skimgplgs.imagepy.org/region.png)
+![](http://skimgplgs.imagepy.org/cellpose/region.png)
 
 
 

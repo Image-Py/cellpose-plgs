@@ -5,7 +5,7 @@ from imagepy import IPy
 from imagepy.core import ImagePlus
 
 class Plugin(Simple):
-	title = 'Cell Pose'
+	title = 'Cell Pose Eval'
 	note = ['all']
 	para = {'model':'cyto', 'cytoplasm':0, 'nucleus':0, 'flow':False, 'diams':False, 'slice':False}
 	view = [(list, 'model', ['cyto', 'nuclei'], str, 'model', ''),
