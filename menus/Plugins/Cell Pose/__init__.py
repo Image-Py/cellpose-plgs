@@ -1,0 +1,1 @@
+catlog = ['cellpose_plg']
