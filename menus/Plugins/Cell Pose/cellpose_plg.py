@@ -1,8 +1,6 @@
 import numpy as np
 import pandas as pd
-from imagepy.core.engine import Simple
-from imagepy import IPy
-from imagepy.core import ImagePlus
+from sciapp.action import Simple
 
 class Plugin(Simple):
 	title = 'Cell Pose Eval'
@@ -16,10 +14,8 @@ class Plugin(Simple):
 			(bool, 'slice', 'slice')]
 
 	def run(self, ips, imgs, para = None):
-		print('aaa')
 		import mxnet as mx
 		from cellpose import models, utils
-		print('bbb')
 
 		if not para['slice']: imgs = [ips.img]
 		imgs = [i.reshape((i.shape+(-1,))[:3]) for i in imgs]
@@ -29,7 +25,7 @@ class Plugin(Simple):
 		self.setValue = lambda x: self.progress(x, 100)
 		masks, flows, styles, diams = model.eval(
 			imgs, rescale=None, channels=channels, progress=self)
-		IPy.show_img(masks, ips.title+'-cp_mask')
-		if para['flow']: IPy.show_img([i[0] for i in flows], ips.title+'-cp_flow')
+		self.app.show_img(masks, ips.title+'-cp_mask')
+		if para['flow']: self.app.show_img([i[0] for i in flows], ips.title+'-cp_flow')
 		if para['diams']: 
-			IPy.show_table(pd.DataFrame({'diams': diams}), ips.title+'-cp_diams')
+			self.app.show_table(pd.DataFrame({'diams': diams}), ips.title+'-cp_diams')
